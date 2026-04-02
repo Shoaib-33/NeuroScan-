@@ -1,0 +1,17 @@
+{
+    "TensorFlow (FP32)": {
+        "latency_ms": 9.146038293838501,
+        "accuracy": 0.7,
+        "size_mb": null
+    },
+    "ONNX FP32": {
+        "latency_ms": 5.294694900512695,
+        "accuracy": 0.7,
+        "size_mb": 9.096985816955566
+    },
+    "ONNX Static INT8": {
+        "latency_ms": 4.193357229232788,
+        "accuracy": 0.005,
+        "size_mb": 2.507014274597168
+    }
+}

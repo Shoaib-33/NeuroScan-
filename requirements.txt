@@ -1,0 +1,16 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+python-multipart==0.0.9
+pydantic==2.8.2
+
+tensorflow==2.10.0
+numpy==1.23.5
+protobuf==3.19.6
+
+onnxruntime==1.18.1
+
+opencv-python-headless==4.7.0.72
+Pillow==10.3.0
+PyYAML==6.0.1
+
+matplotlib==3.7.5

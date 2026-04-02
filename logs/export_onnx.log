@@ -1,0 +1,88 @@
+2026-03-31 23:47:29 | INFO | export_onnx | Loading model from ./saved_models\best_brain_tumor_model.h5
+2026-03-31 23:48:32 | INFO | export_onnx | Loading model from ./saved_models\ft_best.h5
+2026-03-31 23:48:45 | INFO | export_onnx | Loading model from ./saved_models\ft_best.h5
+2026-03-31 23:51:06 | INFO | export_onnx | Loading model from ./saved_models\ft_best.h5
+2026-04-01 00:13:41 | INFO | export_onnx | Loading model from ./saved_models\ft_best.h5
+2026-04-01 00:13:43 | INFO | export_onnx | Exporting model to ONNX → ./onnx_models\model_fp32.onnx
+2026-04-01 00:13:48 | INFO | export_onnx | ONNX export successful — size: 9.14 MB
+2026-04-01 00:13:48 | WARNING | export_onnx | Dynamic quantization skipped: No module named 'onnx.reference'
+2026-04-01 00:13:48 | WARNING | export_onnx | Static quantization skipped: No module named 'onnx.reference'
+2026-04-01 00:13:48 | INFO | export_onnx | 
+Benchmarking model formats ...
+2026-04-01 00:14:18 | INFO | export_onnx | Loading model from ./saved_models\ft_best.h5
+2026-04-01 00:14:19 | INFO | export_onnx | Exporting model to ONNX → ./onnx_models\model_fp32.onnx
+2026-04-01 00:14:25 | INFO | export_onnx | ONNX export successful — size: 9.14 MB
+2026-04-01 00:14:25 | WARNING | export_onnx | Dynamic quantization skipped: No module named 'onnx.reference'
+2026-04-01 00:14:25 | WARNING | export_onnx | Static quantization skipped: No module named 'onnx.reference'
+2026-04-01 00:14:25 | INFO | export_onnx | 
+Benchmarking model formats ...
+2026-04-01 00:14:28 | INFO | export_onnx | TensorFlow (FP32) | acc=0.7000 | 10.53 ms/sample
+2026-04-01 00:14:28 | INFO | export_onnx | ONNX FP32              | acc=0.7000 | 3.02 ms/sample | 9.14 MB
+2026-04-01 00:14:28 | WARNING | export_onnx | Skipping ONNX Dynamic INT8 — path is None
+2026-04-01 00:14:28 | WARNING | export_onnx | Skipping ONNX Static INT8 — path is None
+2026-04-01 00:14:29 | INFO | export_onnx | Benchmark results saved → ./onnx_models\benchmark_results.json
+2026-04-01 00:14:29 | WARNING | export_onnx | ONNX export complete. Quantization skipped: No module named 'onnx.reference'
+2026-04-01 00:20:40 | INFO | export_onnx | Loading model from ./saved_models\ft_best.h5
+2026-04-01 00:20:42 | INFO | export_onnx | Exporting model to ONNX → ./onnx_models\model_fp32.onnx
+2026-04-01 00:20:48 | INFO | export_onnx | ONNX export successful — size: 9.10 MB
+2026-04-01 00:20:48 | INFO | export_onnx | Applying Dynamic Quantization → ./onnx_models\model_dynamic_int8.onnx
+2026-04-01 00:21:49 | INFO | export_onnx | Loading model from ./saved_models\ft_best.h5
+2026-04-01 00:21:51 | INFO | export_onnx | Exporting model to ONNX → ./onnx_models\model_fp32.onnx
+2026-04-01 00:21:57 | INFO | export_onnx | ONNX export successful — size: 9.10 MB
+2026-04-01 00:21:57 | INFO | export_onnx | Applying Dynamic Quantization → ./onnx_models\model_dynamic_int8.onnx
+2026-04-01 00:21:57 | INFO | export_onnx | Dynamic quantized model — size: 2.50 MB
+2026-04-01 00:21:57 | INFO | export_onnx | Applying Static Quantization → ./onnx_models\model_static_int8.onnx
+2026-04-01 00:21:59 | INFO | export_onnx | Calibration reader: 10 batches loaded
+2026-04-01 00:22:02 | INFO | export_onnx | Static quantized model — size: 2.51 MB
+2026-04-01 00:22:02 | INFO | export_onnx | 
+Benchmarking model formats ...
+2026-04-01 00:22:04 | INFO | export_onnx | TensorFlow (FP32) | acc=0.7000 | 9.38 ms/sample
+2026-04-01 00:22:05 | INFO | export_onnx | ONNX FP32                | acc=0.7000 | 5.42 ms/sample | 9.10 MB
+2026-04-01 11:32:15 | INFO | export_onnx | Loading model from ./saved_models\ft_best.h5
+2026-04-01 11:32:17 | INFO | export_onnx | Exporting model to ONNX → ./onnx_models\model_fp32.onnx
+2026-04-01 11:32:23 | INFO | export_onnx | ONNX export successful — size: 9.10 MB
+2026-04-01 11:32:23 | INFO | export_onnx | Applying Dynamic Quantization -> ./onnx_models\model_dynamic_int8.onnx
+2026-04-01 11:35:30 | INFO | export_onnx | Loading model from ./saved_models\ft_best.h5
+2026-04-01 11:35:32 | INFO | export_onnx | Exporting model to ONNX → ./onnx_models\model_fp32.onnx
+2026-04-01 11:35:37 | INFO | export_onnx | ONNX export successful — size: 9.10 MB
+2026-04-01 11:35:37 | INFO | export_onnx | Applying Dynamic Quantization → ./onnx_models\model_dynamic_int8.onnx
+2026-04-01 11:35:38 | INFO | export_onnx | Dynamic quantized model — size: 2.50 MB
+2026-04-01 11:35:38 | INFO | export_onnx | Applying Static Quantization → ./onnx_models\model_static_int8.onnx
+2026-04-01 11:35:40 | INFO | export_onnx | Calibration reader: 10 batches loaded
+2026-04-01 11:35:42 | INFO | export_onnx | Static quantized model — size: 2.51 MB
+2026-04-01 11:35:42 | INFO | export_onnx | 
+Benchmarking model formats ...
+2026-04-01 11:35:46 | INFO | export_onnx | TensorFlow (FP32) | acc=0.7000 | 9.62 ms/sample
+2026-04-01 11:35:47 | INFO | export_onnx | ONNX FP32                | acc=0.7000 | 5.07 ms/sample | 9.10 MB
+2026-04-01 11:45:39 | INFO | export_onnx | Loading model from ./saved_models\ft_best.h5
+2026-04-01 11:45:40 | INFO | export_onnx | Exporting model to ONNX → ./onnx_models\model_fp32.onnx
+2026-04-01 11:45:46 | INFO | export_onnx | ONNX export successful — size: 9.10 MB
+2026-04-01 11:45:46 | INFO | export_onnx | Applying Dynamic Quantization → ./onnx_models\model_dynamic_int8.onnx
+2026-04-01 11:45:47 | INFO | export_onnx | Dynamic quantized model — size: 2.50 MB
+2026-04-01 11:45:47 | INFO | export_onnx | Applying Static Quantization → ./onnx_models\model_static_int8.onnx
+2026-04-01 11:45:48 | INFO | export_onnx | Calibration reader: 10 batches loaded
+2026-04-01 11:45:51 | INFO | export_onnx | Static quantized model — size: 2.51 MB
+2026-04-01 11:45:51 | INFO | export_onnx | 
+Benchmarking model formats ...
+2026-04-01 11:45:53 | INFO | export_onnx | TensorFlow (FP32) | acc=0.7000 | 9.55 ms/sample
+2026-04-01 11:45:54 | INFO | export_onnx | ONNX FP32                | acc=0.7000 | 5.14 ms/sample | 9.10 MB
+2026-04-01 11:45:54 | WARNING | export_onnx | Skipping ONNX Dynamic INT8 due to runtime error: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name 'mobilenet_transfer/mobilenetv2_1.00_224/Conv1/Conv2D_quant'
+2026-04-01 11:45:55 | INFO | export_onnx | ONNX Static INT8         | acc=0.0050 | 4.53 ms/sample | 2.51 MB
+2026-04-01 11:45:55 | INFO | export_onnx | Benchmark results saved → ./onnx_models\benchmark_results.json
+2026-04-01 11:45:55 | INFO | export_onnx | ONNX export complete. Quantization attempted.
+2026-04-01 11:50:04 | INFO | export_onnx | Loading model from ./saved_models\ft_best.h5
+2026-04-01 11:50:06 | INFO | export_onnx | Exporting model to ONNX → ./onnx_models\model_fp32.onnx
+2026-04-01 11:50:11 | INFO | export_onnx | ONNX export successful — size: 9.10 MB
+2026-04-01 11:50:11 | INFO | export_onnx | Applying Dynamic Quantization → ./onnx_models\model_dynamic_int8.onnx
+2026-04-01 11:50:12 | INFO | export_onnx | Dynamic quantized model — size: 2.50 MB
+2026-04-01 11:50:12 | INFO | export_onnx | Applying Static Quantization → ./onnx_models\model_static_int8.onnx
+2026-04-01 11:50:19 | INFO | export_onnx | Calibration reader: 50 batches loaded
+2026-04-01 11:50:30 | INFO | export_onnx | Static quantized model — size: 2.51 MB
+2026-04-01 11:50:30 | INFO | export_onnx | 
+Benchmarking model formats ...
+2026-04-01 11:50:32 | INFO | export_onnx | TensorFlow (FP32) | acc=0.7000 | 9.15 ms/sample
+2026-04-01 11:50:33 | INFO | export_onnx | ONNX FP32                | acc=0.7000 | 5.29 ms/sample | 9.10 MB
+2026-04-01 11:50:33 | WARNING | export_onnx | Skipping ONNX Dynamic INT8 due to runtime error: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name 'mobilenet_transfer/mobilenetv2_1.00_224/Conv1/Conv2D_quant'
+2026-04-01 11:50:34 | INFO | export_onnx | ONNX Static INT8         | acc=0.0050 | 4.19 ms/sample | 2.51 MB
+2026-04-01 11:50:34 | INFO | export_onnx | Benchmark results saved → ./onnx_models\benchmark_results.json
+2026-04-01 11:50:34 | INFO | export_onnx | ONNX export complete. Quantization attempted.

@@ -1,0 +1,135 @@
+2026-04-01 00:27:54 | INFO | api | Loading models ...
+2026-04-01 00:27:54 | ERROR | api | Failed to load TF model: No file or directory found at ./saved_models\best_brain_tumor_model.h5
+2026-04-01 00:27:54 | INFO | api | onnx_fp32 loaded.
+2026-04-01 00:27:55 | WARNING | api | onnx_dynamic not available: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name 'mobilenet_transfer/mobilenetv2_1.00_224/Conv1/Conv2D_quant'
+2026-04-01 00:27:55 | INFO | api | onnx_static loaded.
+2026-04-01 00:27:55 | INFO | api | Loaded backends: ['onnx_fp32', 'onnx_static']
+2026-04-01 00:37:17 | INFO | api | Loading models ...
+2026-04-01 00:37:17 | ERROR | api | Failed to load TF model: No file or directory found at ./saved_models\best_brain_tumor_model.h5
+2026-04-01 00:37:17 | INFO | api | onnx_fp32 loaded.
+2026-04-01 00:37:17 | WARNING | api | onnx_dynamic not available: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name 'mobilenet_transfer/mobilenetv2_1.00_224/Conv1/Conv2D_quant'
+2026-04-01 00:37:17 | INFO | api | onnx_static loaded.
+2026-04-01 00:37:17 | INFO | api | Loaded backends: ['onnx_fp32', 'onnx_static']
+2026-04-01 00:42:17 | INFO | api | Loading models ...
+2026-04-01 00:42:19 | INFO | api | TF model loaded.
+2026-04-01 00:42:19 | INFO | api | onnx_fp32 loaded.
+2026-04-01 00:42:19 | WARNING | api | onnx_dynamic not available: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name 'mobilenet_transfer/mobilenetv2_1.00_224/Conv1/Conv2D_quant'
+2026-04-01 00:42:19 | INFO | api | onnx_static loaded.
+2026-04-01 00:42:19 | INFO | api | Loaded backends: ['tensorflow', 'onnx_fp32', 'onnx_static']
+2026-04-01 00:50:24 | INFO | api | Loading models ...
+2026-04-01 00:50:26 | INFO | api | TF model loaded.
+2026-04-01 00:50:26 | INFO | api | onnx_fp32 loaded.
+2026-04-01 00:50:26 | WARNING | api | onnx_dynamic not available: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name 'mobilenet_transfer/mobilenetv2_1.00_224/Conv1/Conv2D_quant'
+2026-04-01 00:50:26 | INFO | api | onnx_static loaded.
+2026-04-01 00:50:26 | INFO | api | Loaded backends: ['tensorflow', 'onnx_fp32', 'onnx_static']
+2026-04-01 00:53:52 | INFO | api | Loading models ...
+2026-04-01 00:53:53 | INFO | api | TF model loaded.
+2026-04-01 00:53:53 | INFO | api | onnx_fp32 loaded.
+2026-04-01 00:53:53 | WARNING | api | onnx_dynamic not available: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name 'mobilenet_transfer/mobilenetv2_1.00_224/Conv1/Conv2D_quant'
+2026-04-01 00:53:53 | INFO | api | onnx_static loaded.
+2026-04-01 00:53:53 | INFO | api | Loaded backends: ['tensorflow', 'onnx_fp32', 'onnx_static']
+2026-04-01 00:54:31 | INFO | api | Loading models ...
+2026-04-01 00:54:32 | INFO | api | TF model loaded.
+2026-04-01 00:54:32 | INFO | api | onnx_fp32 loaded.
+2026-04-01 00:54:32 | WARNING | api | onnx_dynamic not available: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name 'mobilenet_transfer/mobilenetv2_1.00_224/Conv1/Conv2D_quant'
+2026-04-01 00:54:32 | INFO | api | onnx_static loaded.
+2026-04-01 00:54:32 | INFO | api | Loaded backends: ['tensorflow', 'onnx_fp32', 'onnx_static']
+2026-04-01 00:56:42 | INFO | api | Loading models ...
+2026-04-01 00:56:44 | INFO | api | TF model loaded.
+2026-04-01 00:56:44 | INFO | api | onnx_fp32 loaded.
+2026-04-01 00:56:44 | WARNING | api | onnx_dynamic not available: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name 'mobilenet_transfer/mobilenetv2_1.00_224/Conv1/Conv2D_quant'
+2026-04-01 00:56:44 | INFO | api | onnx_static loaded.
+2026-04-01 00:56:44 | INFO | api | Loaded backends: ['tensorflow', 'onnx_fp32', 'onnx_static']
+2026-04-01 00:59:49 | INFO | api | Loading models ...
+2026-04-01 00:59:51 | INFO | api | TF model loaded.
+2026-04-01 00:59:51 | INFO | api | onnx_fp32 loaded.
+2026-04-01 00:59:51 | WARNING | api | onnx_dynamic not available: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name 'mobilenet_transfer/mobilenetv2_1.00_224/Conv1/Conv2D_quant'
+2026-04-01 00:59:51 | INFO | api | onnx_static loaded.
+2026-04-01 00:59:51 | INFO | api | Loaded backends: ['tensorflow', 'onnx_fp32', 'onnx_static']
+2026-04-01 01:00:17 | INFO | api | Loading models ...
+2026-04-01 01:00:18 | INFO | api | TF model loaded.
+2026-04-01 01:00:18 | INFO | api | onnx_fp32 loaded.
+2026-04-01 01:00:18 | WARNING | api | onnx_dynamic not available: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name 'mobilenet_transfer/mobilenetv2_1.00_224/Conv1/Conv2D_quant'
+2026-04-01 01:00:18 | INFO | api | onnx_static loaded.
+2026-04-01 01:00:18 | INFO | api | Loaded backends: ['tensorflow', 'onnx_fp32', 'onnx_static']
+2026-04-01 01:01:53 | INFO | api | Loading models ...
+2026-04-01 01:01:54 | INFO | api | TF model loaded.
+2026-04-01 01:01:54 | INFO | api | onnx_fp32 loaded.
+2026-04-01 01:01:55 | WARNING | api | onnx_dynamic not available: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name 'mobilenet_transfer/mobilenetv2_1.00_224/Conv1/Conv2D_quant'
+2026-04-01 01:01:55 | INFO | api | onnx_static loaded.
+2026-04-01 01:01:55 | INFO | api | Loaded backends: ['tensorflow', 'onnx_fp32', 'onnx_static']
+2026-04-01 11:18:47 | INFO | api | [OK] tensorflow loaded.
+2026-04-01 11:18:47 | INFO | api | [OK] onnx_fp32 loaded.
+2026-04-01 11:18:47 | ERROR | api | [FAIL] onnx_dynamic failed to load: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name 'mobilenet_transfer/mobilenetv2_1.00_224/Conv1/Conv2D_quant'
+2026-04-01 11:18:47 | INFO | api | [OK] onnx_static loaded.
+2026-04-01 11:18:47 | INFO | api | Loaded backends  : ['tensorflow', 'onnx_fp32', 'onnx_static']
+2026-04-01 11:18:47 | WARNING | api | Failed backends  : ['onnx_dynamic']
+2026-04-01 11:18:47 | WARNING | api |   onnx_dynamic: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name 'mobilenet_transfer/mobilenetv2_1.00_224/Conv1/Conv2D_quant'
+2026-04-01 11:19:01 | INFO | api | [OK] tensorflow loaded.
+2026-04-01 11:19:01 | INFO | api | [OK] onnx_fp32 loaded.
+2026-04-01 11:19:01 | ERROR | api | [FAIL] onnx_dynamic failed to load: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name 'mobilenet_transfer/mobilenetv2_1.00_224/Conv1/Conv2D_quant'
+2026-04-01 11:19:01 | INFO | api | [OK] onnx_static loaded.
+2026-04-01 11:19:01 | INFO | api | Loaded backends  : ['tensorflow', 'onnx_fp32', 'onnx_static']
+2026-04-01 11:19:01 | WARNING | api | Failed backends  : ['onnx_dynamic']
+2026-04-01 11:19:01 | WARNING | api |   onnx_dynamic: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name 'mobilenet_transfer/mobilenetv2_1.00_224/Conv1/Conv2D_quant'
+2026-04-01 11:20:15 | INFO | api | [OK] tensorflow loaded.
+2026-04-01 11:20:15 | INFO | api | [OK] onnx_fp32 loaded.
+2026-04-01 11:20:15 | ERROR | api | [FAIL] onnx_dynamic failed to load: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name 'mobilenet_transfer/mobilenetv2_1.00_224/Conv1/Conv2D_quant'
+2026-04-01 11:20:15 | INFO | api | [OK] onnx_static loaded.
+2026-04-01 11:20:15 | INFO | api | Loaded backends  : ['tensorflow', 'onnx_fp32', 'onnx_static']
+2026-04-01 11:20:15 | WARNING | api | Failed backends  : ['onnx_dynamic']
+2026-04-01 11:20:15 | WARNING | api |   onnx_dynamic: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name 'mobilenet_transfer/mobilenetv2_1.00_224/Conv1/Conv2D_quant'
+2026-04-01 11:20:41 | INFO | api | Loading models ...
+2026-04-01 11:20:43 | INFO | api | TF model loaded.
+2026-04-01 11:20:43 | INFO | api | onnx_fp32 loaded.
+2026-04-01 11:20:43 | WARNING | api | onnx_dynamic not available: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name 'mobilenet_transfer/mobilenetv2_1.00_224/Conv1/Conv2D_quant'
+2026-04-01 11:20:43 | INFO | api | onnx_static loaded.
+2026-04-01 11:20:43 | INFO | api | Loaded backends: ['tensorflow', 'onnx_fp32', 'onnx_static']
+2026-04-01 11:20:59 | INFO | api | Loading models ...
+2026-04-01 11:21:01 | INFO | api | TF model loaded.
+2026-04-01 11:21:01 | INFO | api | onnx_fp32 loaded.
+2026-04-01 11:21:01 | WARNING | api | onnx_dynamic not available: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name 'mobilenet_transfer/mobilenetv2_1.00_224/Conv1/Conv2D_quant'
+2026-04-01 11:21:01 | INFO | api | onnx_static loaded.
+2026-04-01 11:21:01 | INFO | api | Loaded backends: ['tensorflow', 'onnx_fp32', 'onnx_static']
+2026-04-01 11:28:21 | INFO | api | Loading models ...
+2026-04-01 11:28:22 | INFO | api | [OK] TF model loaded.
+2026-04-01 11:28:22 | INFO | api | [OK] onnx_fp32 loaded.
+2026-04-01 11:28:23 | ERROR | api | [FAIL] onnx_dynamic failed: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name 'mobilenet_transfer/mobilenetv2_1.00_224/Conv1/Conv2D_quant'
+2026-04-01 11:28:23 | INFO | api | [OK] onnx_static loaded.
+2026-04-01 11:28:23 | INFO | api | Loaded backends : ['tensorflow', 'onnx_fp32', 'onnx_static']
+2026-04-01 11:28:23 | WARNING | api | Failed backends : ['onnx_dynamic']
+2026-04-01 11:28:29 | INFO | api | Loading models ...
+2026-04-01 11:28:31 | INFO | api | [OK] TF model loaded.
+2026-04-01 11:28:31 | INFO | api | [OK] onnx_fp32 loaded.
+2026-04-01 11:28:31 | ERROR | api | [FAIL] onnx_dynamic failed: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name 'mobilenet_transfer/mobilenetv2_1.00_224/Conv1/Conv2D_quant'
+2026-04-01 11:28:31 | INFO | api | [OK] onnx_static loaded.
+2026-04-01 11:28:31 | INFO | api | Loaded backends : ['tensorflow', 'onnx_fp32', 'onnx_static']
+2026-04-01 11:28:31 | WARNING | api | Failed backends : ['onnx_dynamic']
+2026-04-01 11:28:38 | INFO | api | Loading models ...
+2026-04-01 11:28:40 | INFO | api | [OK] TF model loaded.
+2026-04-01 11:28:40 | INFO | api | [OK] onnx_fp32 loaded.
+2026-04-01 11:28:40 | ERROR | api | [FAIL] onnx_dynamic failed: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name 'mobilenet_transfer/mobilenetv2_1.00_224/Conv1/Conv2D_quant'
+2026-04-01 11:28:40 | INFO | api | [OK] onnx_static loaded.
+2026-04-01 11:28:40 | INFO | api | Loaded backends : ['tensorflow', 'onnx_fp32', 'onnx_static']
+2026-04-01 11:28:40 | WARNING | api | Failed backends : ['onnx_dynamic']
+2026-04-01 11:46:37 | INFO | api | Loading models ...
+2026-04-01 11:46:39 | INFO | api | [OK] TF model loaded.
+2026-04-01 11:46:39 | INFO | api | [OK] onnx_fp32 loaded.
+2026-04-01 11:46:39 | ERROR | api | [FAIL] onnx_dynamic failed: ONNX Dynamic INT8 model is not supported in this ONNX Runtime build: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name 'mobilenet_transfer/mobilenetv2_1.00_224/Conv1/Conv2D_quant'
+2026-04-01 11:46:39 | INFO | api | [OK] onnx_static loaded.
+2026-04-01 11:46:39 | INFO | api | Loaded backends : ['tensorflow', 'onnx_fp32', 'onnx_static']
+2026-04-01 11:46:39 | WARNING | api | Failed backends : ['onnx_dynamic']
+2026-04-01 11:51:09 | INFO | api | Loading models ...
+2026-04-01 11:51:10 | INFO | api | [OK] TF model loaded.
+2026-04-01 11:51:10 | INFO | api | [OK] onnx_fp32 loaded.
+2026-04-01 11:51:10 | ERROR | api | [FAIL] onnx_dynamic failed: ONNX Dynamic INT8 model is not supported in this ONNX Runtime build: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name 'mobilenet_transfer/mobilenetv2_1.00_224/Conv1/Conv2D_quant'
+2026-04-01 11:51:10 | INFO | api | [OK] onnx_static loaded.
+2026-04-01 11:51:10 | INFO | api | Loaded backends : ['tensorflow', 'onnx_fp32', 'onnx_static']
+2026-04-01 11:51:10 | WARNING | api | Failed backends : ['onnx_dynamic']
+2026-04-01 12:06:18 | INFO | api | Loading models ...
+2026-04-01 12:06:20 | INFO | api | [OK] TF model loaded.
+2026-04-01 12:06:20 | INFO | api | [OK] onnx_fp32 loaded.
+2026-04-01 12:06:20 | ERROR | api | [FAIL] onnx_dynamic failed: ONNX Dynamic INT8 model is not supported in this ONNX Runtime build: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name 'mobilenet_transfer/mobilenetv2_1.00_224/Conv1/Conv2D_quant'
+2026-04-01 12:06:20 | INFO | api | [OK] onnx_static loaded.
+2026-04-01 12:06:20 | INFO | api | Loaded backends : ['tensorflow', 'onnx_fp32', 'onnx_static']
+2026-04-01 12:06:20 | WARNING | api | Failed backends : ['onnx_dynamic']

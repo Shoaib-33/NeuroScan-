@@ -1,0 +1,48 @@
+2026-03-31 12:46:00 | INFO | models | Built Baseline CNN
+2026-03-31 12:57:32 | INFO | models | Built MobileNetV2 Transfer Learning model
+2026-03-31 13:08:18 | INFO | models | Fine-tuned MobileNetV2: last 20 layers unfrozen
+2026-03-31 13:13:19 | INFO | models | Built EfficientNetB0 Transfer Learning model
+2026-03-31 15:59:58 | INFO | models | Built Baseline CNN
+2026-03-31 16:11:02 | INFO | models | Built MobileNetV2 Transfer Learning model
+2026-03-31 16:22:01 | INFO | models | Fine-tuned MobileNetV2: last 20 layers unfrozen
+2026-03-31 16:27:01 | INFO | models | Built EfficientNetB0 Transfer Learning model
+2026-03-31 16:43:08 | INFO | models | Built Baseline CNN
+2026-03-31 16:53:39 | INFO | models | Built MobileNetV2 Transfer Learning model
+2026-03-31 17:04:25 | INFO | models | Fine-tuned MobileNetV2: last 20 layers unfrozen
+2026-03-31 17:09:23 | INFO | models | Built EfficientNetB0 Transfer Learning model
+2026-03-31 17:36:34 | INFO | models | Built Baseline CNN
+2026-03-31 17:47:07 | INFO | models | Built MobileNetV2 Transfer Learning model
+2026-03-31 17:54:34 | INFO | models | Fine-tuned MobileNetV2: last 20 layers unfrozen
+2026-03-31 18:03:37 | INFO | models | Built EfficientNetB0 Transfer Learning model
+2026-03-31 18:06:52 | INFO | models | Built Optuna CNN with params: {'filters_1': 32, 'filters_2': 64, 'filters_3': 256, 'dense_units': 128, 'dropout': 0.3528318576498196, 'lr': 0.0023163425192755226}
+2026-03-31 18:09:47 | INFO | models | Built Optuna CNN with params: {'filters_1': 64, 'filters_2': 128, 'filters_3': 128, 'dense_units': 256, 'dropout': 0.298909022597601, 'lr': 0.0012839511259207857}
+2026-03-31 18:13:54 | INFO | models | Built Optuna CNN with params: {'filters_1': 64, 'filters_2': 64, 'filters_3': 256, 'dense_units': 128, 'dropout': 0.29252720375744357, 'lr': 0.0001280007427686007}
+2026-03-31 18:19:00 | INFO | models | Built Optuna CNN with params: {'filters_1': 64, 'filters_2': 128, 'filters_3': 128, 'dense_units': 256, 'dropout': 0.4273282260839636, 'lr': 0.0011210111966337138}
+2026-03-31 18:23:41 | INFO | models | Built Optuna CNN with params: {'filters_1': 32, 'filters_2': 128, 'filters_3': 128, 'dense_units': 64, 'dropout': 0.22784649015605415, 'lr': 0.005766474167607917}
+2026-03-31 18:25:45 | INFO | models | Built Optuna CNN with params: {'filters_1': 64, 'filters_2': 128, 'filters_3': 256, 'dense_units': 64, 'dropout': 0.48880635124006017, 'lr': 0.0032352191388469636}
+2026-03-31 18:27:52 | INFO | models | Built Optuna CNN with params: {'filters_1': 64, 'filters_2': 128, 'filters_3': 128, 'dense_units': 64, 'dropout': 0.41843200212884657, 'lr': 0.00017082690675758604}
+2026-03-31 18:33:06 | INFO | models | Built Optuna CNN with params: {'filters_1': 32, 'filters_2': 64, 'filters_3': 256, 'dense_units': 64, 'dropout': 0.42332478729875544, 'lr': 0.004321482824942734}
+2026-03-31 18:35:11 | INFO | models | Built Optuna CNN with params: {'filters_1': 64, 'filters_2': 128, 'filters_3': 256, 'dense_units': 128, 'dropout': 0.35511716436262036, 'lr': 0.006308240405890077}
+2026-03-31 18:37:52 | INFO | models | Built Optuna CNN with params: {'filters_1': 64, 'filters_2': 128, 'filters_3': 128, 'dense_units': 256, 'dropout': 0.41542144036132356, 'lr': 0.00011919711923710529}
+2026-03-31 18:43:25 | INFO | models | Built Optuna CNN with params: {'filters_1': 64, 'filters_2': 128, 'filters_3': 128, 'dense_units': 256, 'dropout': 0.41542144036132356, 'lr': 0.00011919711923710529}
+2026-03-31 20:07:22 | INFO | models | Built Baseline CNN
+2026-03-31 20:18:34 | INFO | models | Built MobileNetV2 Transfer Learning model
+2026-03-31 20:30:54 | INFO | models | Fine-tuned MobileNetV2: last 20 layers unfrozen
+2026-03-31 20:34:10 | INFO | models | Built Baseline CNN
+2026-03-31 20:46:13 | INFO | models | Built MobileNetV2 Transfer Learning model
+2026-03-31 20:58:01 | INFO | models | Fine-tuned MobileNetV2: last 20 layers unfrozen
+2026-03-31 21:12:51 | INFO | models | Built Baseline CNN
+2026-03-31 21:24:33 | INFO | models | Built MobileNetV2 Transfer Learning model
+2026-03-31 21:33:02 | INFO | models | Fine-tuned MobileNetV2: last 20 layers unfrozen
+2026-03-31 21:44:07 | INFO | models | Built EfficientNetB0 Transfer Learning model
+2026-03-31 21:54:35 | INFO | models | Built Optuna CNN with params: {'filters_1': 32, 'filters_2': 128, 'filters_3': 128, 'dense_units': 64, 'dropout': 0.32019749083776056, 'lr': 0.00013123523142015807}
+2026-03-31 21:59:44 | INFO | models | Built Optuna CNN with params: {'filters_1': 32, 'filters_2': 128, 'filters_3': 128, 'dense_units': 64, 'dropout': 0.3608500202287982, 'lr': 0.006160897969691244}
+2026-03-31 22:02:36 | INFO | models | Built Optuna CNN with params: {'filters_1': 64, 'filters_2': 64, 'filters_3': 256, 'dense_units': 64, 'dropout': 0.36105752942364244, 'lr': 0.0049551985659201875}
+2026-03-31 22:05:22 | INFO | models | Built Optuna CNN with params: {'filters_1': 32, 'filters_2': 64, 'filters_3': 256, 'dense_units': 128, 'dropout': 0.23703993355843925, 'lr': 0.00038430793245279804}
+2026-03-31 22:10:37 | INFO | models | Built Optuna CNN with params: {'filters_1': 32, 'filters_2': 64, 'filters_3': 256, 'dense_units': 256, 'dropout': 0.4927392453904861, 'lr': 0.00046537997987104555}
+2026-03-31 22:15:47 | INFO | models | Built Optuna CNN with params: {'filters_1': 32, 'filters_2': 128, 'filters_3': 128, 'dense_units': 128, 'dropout': 0.29917774216119697, 'lr': 0.004167362541330431}
+2026-03-31 22:18:57 | INFO | models | Built Optuna CNN with params: {'filters_1': 64, 'filters_2': 128, 'filters_3': 128, 'dense_units': 128, 'dropout': 0.21910790415316955, 'lr': 0.001097875265927963}
+2026-03-31 22:24:20 | INFO | models | Built Optuna CNN with params: {'filters_1': 64, 'filters_2': 128, 'filters_3': 256, 'dense_units': 128, 'dropout': 0.2258892046075821, 'lr': 0.00022392987135907492}
+2026-03-31 22:29:43 | INFO | models | Built Optuna CNN with params: {'filters_1': 32, 'filters_2': 128, 'filters_3': 256, 'dense_units': 64, 'dropout': 0.26014293287733325, 'lr': 0.0028061362157403144}
+2026-03-31 22:33:27 | INFO | models | Built Optuna CNN with params: {'filters_1': 32, 'filters_2': 128, 'filters_3': 128, 'dense_units': 256, 'dropout': 0.34722069690590884, 'lr': 0.0025020125205854928}
+2026-03-31 22:39:09 | INFO | models | Built Optuna CNN with params: {'filters_1': 64, 'filters_2': 128, 'filters_3': 256, 'dense_units': 128, 'dropout': 0.2258892046075821, 'lr': 0.00022392987135907492}

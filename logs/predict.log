@@ -1,0 +1,96 @@
+2026-04-01 00:27:54 | INFO | predict | Loading TF model from ./saved_models\best_brain_tumor_model.h5
+2026-04-01 00:27:54 | INFO | predict | Loading ONNX FP32 from ./onnx_models\model_fp32.onnx
+2026-04-01 00:27:54 | INFO | predict | Loading ONNX Dynamic INT8 from ./onnx_models\model_dynamic_int8.onnx
+2026-04-01 00:27:55 | INFO | predict | Loading ONNX Static INT8 from ./onnx_models\model_static_int8.onnx
+2026-04-01 00:37:17 | INFO | predict | Loading TF model from ./saved_models\best_brain_tumor_model.h5
+2026-04-01 00:37:17 | INFO | predict | Loading ONNX FP32 from ./onnx_models\model_fp32.onnx
+2026-04-01 00:37:17 | INFO | predict | Loading ONNX Dynamic INT8 from ./onnx_models\model_dynamic_int8.onnx
+2026-04-01 00:37:17 | INFO | predict | Loading ONNX Static INT8 from ./onnx_models\model_static_int8.onnx
+2026-04-01 00:42:17 | INFO | predict | Loading TF model from ./saved_models\ft_best.h5
+2026-04-01 00:42:19 | INFO | predict | Loading ONNX FP32 from ./onnx_models\model_fp32.onnx
+2026-04-01 00:42:19 | INFO | predict | Loading ONNX Dynamic INT8 from ./onnx_models\model_dynamic_int8.onnx
+2026-04-01 00:42:19 | INFO | predict | Loading ONNX Static INT8 from ./onnx_models\model_static_int8.onnx
+2026-04-01 00:50:24 | INFO | predict | Loading TF model from ./saved_models\ft_best.h5
+2026-04-01 00:50:26 | INFO | predict | Loading ONNX FP32 from ./onnx_models\model_fp32.onnx
+2026-04-01 00:50:26 | INFO | predict | Loading ONNX Dynamic INT8 from ./onnx_models\model_dynamic_int8.onnx
+2026-04-01 00:50:26 | INFO | predict | Loading ONNX Static INT8 from ./onnx_models\model_static_int8.onnx
+2026-04-01 00:53:52 | INFO | predict | Loading TF model from ./saved_models\ft_best.h5
+2026-04-01 00:53:53 | INFO | predict | Loading ONNX FP32 from ./onnx_models\model_fp32.onnx
+2026-04-01 00:53:53 | INFO | predict | Loading ONNX Dynamic INT8 from ./onnx_models\model_dynamic_int8.onnx
+2026-04-01 00:53:53 | INFO | predict | Loading ONNX Static INT8 from ./onnx_models\model_static_int8.onnx
+2026-04-01 00:54:31 | INFO | predict | Loading TF model from ./saved_models\ft_best.h5
+2026-04-01 00:54:32 | INFO | predict | Loading ONNX FP32 from ./onnx_models\model_fp32.onnx
+2026-04-01 00:54:32 | INFO | predict | Loading ONNX Dynamic INT8 from ./onnx_models\model_dynamic_int8.onnx
+2026-04-01 00:54:32 | INFO | predict | Loading ONNX Static INT8 from ./onnx_models\model_static_int8.onnx
+2026-04-01 00:56:42 | INFO | predict | Loading TF model from ./saved_models\ft_best.h5
+2026-04-01 00:56:44 | INFO | predict | Loading ONNX FP32 from ./onnx_models\model_fp32.onnx
+2026-04-01 00:56:44 | INFO | predict | Loading ONNX Dynamic INT8 from ./onnx_models\model_dynamic_int8.onnx
+2026-04-01 00:56:44 | INFO | predict | Loading ONNX Static INT8 from ./onnx_models\model_static_int8.onnx
+2026-04-01 00:59:49 | INFO | predict | Loading TF model from ./saved_models\ft_best.h5
+2026-04-01 00:59:51 | INFO | predict | Loading ONNX FP32 from ./onnx_models\model_fp32.onnx
+2026-04-01 00:59:51 | INFO | predict | Loading ONNX Dynamic INT8 from ./onnx_models\model_dynamic_int8.onnx
+2026-04-01 00:59:51 | INFO | predict | Loading ONNX Static INT8 from ./onnx_models\model_static_int8.onnx
+2026-04-01 01:00:17 | INFO | predict | Loading TF model from ./saved_models\ft_best.h5
+2026-04-01 01:00:18 | INFO | predict | Loading ONNX FP32 from ./onnx_models\model_fp32.onnx
+2026-04-01 01:00:18 | INFO | predict | Loading ONNX Dynamic INT8 from ./onnx_models\model_dynamic_int8.onnx
+2026-04-01 01:00:18 | INFO | predict | Loading ONNX Static INT8 from ./onnx_models\model_static_int8.onnx
+2026-04-01 01:01:53 | INFO | predict | Loading TF model from ./saved_models\ft_best.h5
+2026-04-01 01:01:54 | INFO | predict | Loading ONNX FP32 from ./onnx_models\model_fp32.onnx
+2026-04-01 01:01:54 | INFO | predict | Loading ONNX Dynamic INT8 from ./onnx_models\model_dynamic_int8.onnx
+2026-04-01 01:01:55 | INFO | predict | Loading ONNX Static INT8 from ./onnx_models\model_static_int8.onnx
+2026-04-01 11:18:46 | INFO | predict | best_brain_tumor_model.h5 not found, using ft_best.h5
+2026-04-01 11:18:46 | INFO | predict | Loading TF model from ./saved_models\ft_best.h5
+2026-04-01 11:18:47 | INFO | predict | Loading onnx_fp32 from ./onnx_models\model_fp32.onnx
+2026-04-01 11:18:47 | INFO | predict | onnx_fp32 loaded successfully.
+2026-04-01 11:18:47 | INFO | predict | Loading onnx_dynamic from ./onnx_models\model_dynamic_int8.onnx
+2026-04-01 11:18:47 | INFO | predict | Loading onnx_static from ./onnx_models\model_static_int8.onnx
+2026-04-01 11:18:47 | INFO | predict | onnx_static loaded successfully.
+2026-04-01 11:18:59 | INFO | predict | best_brain_tumor_model.h5 not found, using ft_best.h5
+2026-04-01 11:18:59 | INFO | predict | Loading TF model from ./saved_models\ft_best.h5
+2026-04-01 11:19:01 | INFO | predict | Loading onnx_fp32 from ./onnx_models\model_fp32.onnx
+2026-04-01 11:19:01 | INFO | predict | onnx_fp32 loaded successfully.
+2026-04-01 11:19:01 | INFO | predict | Loading onnx_dynamic from ./onnx_models\model_dynamic_int8.onnx
+2026-04-01 11:19:01 | INFO | predict | Loading onnx_static from ./onnx_models\model_static_int8.onnx
+2026-04-01 11:19:01 | INFO | predict | onnx_static loaded successfully.
+2026-04-01 11:20:13 | INFO | predict | best_brain_tumor_model.h5 not found, using ft_best.h5
+2026-04-01 11:20:13 | INFO | predict | Loading TF model from ./saved_models\ft_best.h5
+2026-04-01 11:20:15 | INFO | predict | Loading onnx_fp32 from ./onnx_models\model_fp32.onnx
+2026-04-01 11:20:15 | INFO | predict | onnx_fp32 loaded successfully.
+2026-04-01 11:20:15 | INFO | predict | Loading onnx_dynamic from ./onnx_models\model_dynamic_int8.onnx
+2026-04-01 11:20:15 | INFO | predict | Loading onnx_static from ./onnx_models\model_static_int8.onnx
+2026-04-01 11:20:15 | INFO | predict | onnx_static loaded successfully.
+2026-04-01 11:20:41 | INFO | predict | best_brain_tumor_model.h5 not found, using ft_best.h5
+2026-04-01 11:20:41 | INFO | predict | Loading TF model from ./saved_models\ft_best.h5
+2026-04-01 11:20:43 | INFO | predict | Loading onnx_fp32 from ./onnx_models\model_fp32.onnx
+2026-04-01 11:20:43 | INFO | predict | onnx_fp32 loaded successfully.
+2026-04-01 11:20:43 | INFO | predict | Loading onnx_dynamic from ./onnx_models\model_dynamic_int8.onnx
+2026-04-01 11:20:43 | INFO | predict | Loading onnx_static from ./onnx_models\model_static_int8.onnx
+2026-04-01 11:20:43 | INFO | predict | onnx_static loaded successfully.
+2026-04-01 11:20:59 | INFO | predict | Loading TF model from ./saved_models\ft_best.h5
+2026-04-01 11:21:01 | INFO | predict | Loading ONNX FP32 from ./onnx_models\model_fp32.onnx
+2026-04-01 11:21:01 | INFO | predict | Loading ONNX Dynamic INT8 from ./onnx_models\model_dynamic_int8.onnx
+2026-04-01 11:21:01 | INFO | predict | Loading ONNX Static INT8 from ./onnx_models\model_static_int8.onnx
+2026-04-01 11:28:21 | INFO | predict | Loading TF model from ./saved_models\ft_best.h5
+2026-04-01 11:28:22 | INFO | predict | Loading onnx_fp32 from ./onnx_models\model_fp32.onnx
+2026-04-01 11:28:22 | INFO | predict | Loading onnx_dynamic from ./onnx_models\model_dynamic_int8.onnx
+2026-04-01 11:28:23 | INFO | predict | Loading onnx_static from ./onnx_models\model_static_int8.onnx
+2026-04-01 11:28:29 | INFO | predict | Loading TF model from ./saved_models\ft_best.h5
+2026-04-01 11:28:31 | INFO | predict | Loading onnx_fp32 from ./onnx_models\model_fp32.onnx
+2026-04-01 11:28:31 | INFO | predict | Loading onnx_dynamic from ./onnx_models\model_dynamic_int8.onnx
+2026-04-01 11:28:31 | INFO | predict | Loading onnx_static from ./onnx_models\model_static_int8.onnx
+2026-04-01 11:28:38 | INFO | predict | Loading TF model from ./saved_models\ft_best.h5
+2026-04-01 11:28:40 | INFO | predict | Loading onnx_fp32 from ./onnx_models\model_fp32.onnx
+2026-04-01 11:28:40 | INFO | predict | Loading onnx_dynamic from ./onnx_models\model_dynamic_int8.onnx
+2026-04-01 11:28:40 | INFO | predict | Loading onnx_static from ./onnx_models\model_static_int8.onnx
+2026-04-01 11:46:37 | INFO | predict | Loading TF model from ./saved_models\ft_best.h5
+2026-04-01 11:46:39 | INFO | predict | Loading ONNX FP32 from ./onnx_models\model_fp32.onnx
+2026-04-01 11:46:39 | INFO | predict | Loading ONNX Dynamic INT8 from ./onnx_models\model_dynamic_int8.onnx
+2026-04-01 11:46:39 | INFO | predict | Loading ONNX Static INT8 from ./onnx_models\model_static_int8.onnx
+2026-04-01 11:51:09 | INFO | predict | Loading TF model from ./saved_models\ft_best.h5
+2026-04-01 11:51:10 | INFO | predict | Loading ONNX FP32 from ./onnx_models\model_fp32.onnx
+2026-04-01 11:51:10 | INFO | predict | Loading ONNX Dynamic INT8 from ./onnx_models\model_dynamic_int8.onnx
+2026-04-01 11:51:10 | INFO | predict | Loading ONNX Static INT8 from ./onnx_models\model_static_int8.onnx
+2026-04-01 12:06:18 | INFO | predict | Loading TF model from ./saved_models\ft_best.h5
+2026-04-01 12:06:20 | INFO | predict | Loading ONNX FP32 from ./onnx_models\model_fp32.onnx
+2026-04-01 12:06:20 | INFO | predict | Loading ONNX Dynamic INT8 from ./onnx_models\model_dynamic_int8.onnx
+2026-04-01 12:06:20 | INFO | predict | Loading ONNX Static INT8 from ./onnx_models\model_static_int8.onnx

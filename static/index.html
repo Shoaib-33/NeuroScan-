@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>NeuroScan — Brain Tumor Classification</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0a0c10;
+  --bg2:#11141a;
+  --bg3:#181c24;
+  --bg4:#1e2330;
+  --border:#ffffff12;
+  --border2:#ffffff20;
+  --text:#e8eaf0;
+  --text2:#8b90a0;
+  --text3:#555b6e;
+  --accent:#00e5ff;
+  --accent2:#00b4cc;
+  --accent-dim:#00e5ff18;
+  --green:#00e676;
+  --green-dim:#00e67615;
+  --amber:#ffab40;
+  --amber-dim:#ffab4015;
+  --red:#ff5252;
+  --red-dim:#ff525215;
+  --purple:#ce93d8;
+  --purple-dim:#ce93d815;
+  --radius:10px;
+  --shadow:0 4px 24px #00000060;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'DM Mono',monospace;font-size:14px;line-height:1.7;min-height:100vh;overflow-x:hidden}
+body::before{
+  content:'';position:fixed;inset:0;
+  background:repeating-linear-gradient(0deg,transparent,transparent 2px,#00000018 2px,#00000018 4px);
+  pointer-events:none;z-index:9999;opacity:.35
+}
+.shell{max-width:1100px;margin:0 auto;padding:0 24px 80px}
+header{
+  padding:40px 0 32px;
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  flex-wrap:wrap
+}
+.logo{display:flex;align-items:center;gap:14px}
+.logo-mark{
+  width:42px;height:42px;border-radius:8px;
+  background:linear-gradient(135deg,var(--accent),#0066ff);
+  display:grid;place-items:center;font-size:20px;flex-shrink:0
+}
+.logo-text{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;
+  background:linear-gradient(90deg,var(--accent),#80d8ff);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text
+}
+.logo-sub{font-size:11px;color:var(--text3);letter-spacing:.12em;text-transform:uppercase;margin-top:-2px}
+.header-badges{display:flex;gap:8px;flex-wrap:wrap}
+.badge{
+  padding:4px 10px;border-radius:20px;font-size:11px;letter-spacing:.06em;
+  border:1px solid var(--border2);color:var(--text2);background:var(--bg3)
+}
+.badge.live{border-color:#00e67640;color:var(--green);background:var(--green-dim)}
+.badge.live::before{content:'● ';font-size:8px}
+.section-title{
+  font-family:'Syne',sans-serif;font-size:12px;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:16px;
+  display:flex;align-items:center;gap:8px
+}
+.section-title::before{content:'';width:20px;height:1px;background:var(--accent)}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:700px){.grid-2,.grid-3{grid-template-columns:1fr}}
+.card{
+  background:var(--bg2);border:1px solid var(--border);
+  border-radius:var(--radius);padding:24px;
+}
+.card-sm{padding:16px 20px}
+#upload-zone{
+  border:2px dashed var(--border2);border-radius:var(--radius);
+  padding:48px 24px;text-align:center;cursor:pointer;
+  transition:border-color .2s,background .2s;position:relative
+}
+#upload-zone:hover,#upload-zone.drag{border-color:var(--accent);background:var(--accent-dim)}
+#upload-zone input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.upload-icon{font-size:36px;margin-bottom:12px;opacity:.5}
+.upload-label{font-family:'Syne',sans-serif;font-size:15px;font-weight:600;color:var(--text)}
+.upload-hint{font-size:12px;color:var(--text3);margin-top:6px}
+#preview-area{display:none;gap:12px;flex-direction:column}
+.preview-img-wrap{position:relative;border-radius:8px;overflow:hidden;background:var(--bg3)}
+.preview-img-wrap img{width:100%;display:block;border-radius:8px;max-height:260px;object-fit:contain}
+.img-filename{font-size:11px;color:var(--text3);margin-top:6px;word-break:break-all}
+.backend-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:20px}
+.backend-btn{
+  padding:10px 12px;border-radius:8px;border:1px solid var(--border2);
+  background:var(--bg3);color:var(--text2);cursor:pointer;
+  font-family:'DM Mono',monospace;font-size:12px;text-align:left;
+  transition:border-color .15s,background .15s,color .15s;line-height:1.4
+}
+.backend-btn:hover{border-color:var(--accent2);color:var(--text)}
+.backend-btn.active{border-color:var(--accent);background:var(--accent-dim);color:var(--accent)}
+.backend-btn.disabled{
+  opacity:.35;cursor:not-allowed;pointer-events:none
+}
+.backend-btn .b-name{font-weight:500;display:block}
+.backend-btn .b-tag{font-size:10px;opacity:.6;margin-top:2px}
+#analyse-btn{
+  width:100%;padding:14px;border-radius:8px;border:none;cursor:pointer;
+  font-family:'Syne',sans-serif;font-size:14px;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;
+  background:linear-gradient(90deg,var(--accent),#0080ff);
+  color:#000;transition:opacity .2s,transform .1s
+}
+#analyse-btn:hover{opacity:.9}
+#analyse-btn:active{transform:scale(.98)}
+#analyse-btn:disabled{opacity:.35;cursor:not-allowed}
+#results-panel{display:none}
+.prediction-hero{
+  display:flex;align-items:center;gap:16px;
+  padding:20px;border-radius:8px;margin-bottom:20px
+}
+.prediction-hero.glioma{background:var(--red-dim);border:1px solid #ff525230}
+.prediction-hero.meningioma{background:var(--amber-dim);border:1px solid #ffab4030}
+.prediction-hero.notumor{background:var(--green-dim);border:1px solid #00e67630}
+.prediction-hero.pituitary{background:var(--purple-dim);border:1px solid #ce93d830}
+.pred-class{
+  font-family:'Syne',sans-serif;font-size:22px;font-weight:800;
+  text-transform:uppercase;letter-spacing:.06em
+}
+.pred-class.glioma{color:var(--red)}
+.pred-class.meningioma{color:var(--amber)}
+.pred-class.notumor{color:var(--green)}
+.pred-class.pituitary{color:var(--purple)}
+.pred-conf{font-size:13px;color:var(--text2);margin-top:2px}
+.pred-badge{
+  margin-left:auto;padding:6px 14px;border-radius:20px;
+  font-size:11px;font-weight:500;flex-shrink:0
+}
+.pred-badge.high{background:var(--green-dim);color:var(--green);border:1px solid #00e67640}
+.pred-badge.mid{background:var(--amber-dim);color:var(--amber);border:1px solid #ffab4040}
+.pred-badge.low{background:var(--red-dim);color:var(--red);border:1px solid #ff525240}
+.prob-row{margin-bottom:10px}
+.prob-header{display:flex;justify-content:space-between;margin-bottom:4px;font-size:12px}
+.prob-name{color:var(--text2)}
+.prob-val{color:var(--text)}
+.prob-track{height:6px;background:var(--bg4);border-radius:3px;overflow:hidden}
+.prob-fill{height:100%;border-radius:3px;transition:width .8s cubic-bezier(.4,0,.2,1)}
+.prob-fill.glioma{background:var(--red)}
+.prob-fill.meningioma{background:var(--amber)}
+.prob-fill.notumor{background:var(--green)}
+.prob-fill.pituitary{background:var(--purple)}
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.stat-card{
+  background:var(--bg3);border:1px solid var(--border);
+  border-radius:8px;padding:14px;text-align:center
+}
+.stat-val{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:var(--accent)}
+.stat-lbl{font-size:11px;color:var(--text3);margin-top:2px;text-transform:uppercase;letter-spacing:.08em}
+.gradcam-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.gradcam-item{text-align:center}
+.gradcam-item img{width:100%;border-radius:8px;display:block}
+.gradcam-lbl{font-size:11px;color:var(--text3);margin-top:6px;text-transform:uppercase;letter-spacing:.08em}
+.model-table{width:100%;border-collapse:collapse;font-size:12px}
+.model-table th{color:var(--text3);font-weight:400;text-align:left;padding:8px 10px;
+  border-bottom:1px solid var(--border);text-transform:uppercase;letter-spacing:.08em}
+.model-table td{padding:10px;border-bottom:1px solid var(--border)}
+.model-table tr:last-child td{border-bottom:none}
+.model-table tr:hover td{background:var(--bg3)}
+.tag{
+  padding:2px 8px;border-radius:4px;font-size:10px;
+  background:var(--accent-dim);color:var(--accent);border:1px solid var(--accent)30
+}
+.tag.green{background:var(--green-dim);color:var(--green);border-color:#00e67630}
+.tag.amber{background:var(--amber-dim);color:var(--amber);border-color:#ffab4030}
+.spinner{display:none;width:20px;height:20px;border:2px solid #ffffff20;
+  border-top-color:var(--accent);border-radius:50%;animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.btn-inner{display:flex;align-items:center;justify-content:center;gap:10px}
+#toast{
+  position:fixed;bottom:28px;right:28px;z-index:1000;
+  padding:12px 20px;border-radius:8px;font-size:13px;
+  background:var(--bg3);border:1px solid var(--border2);
+  transform:translateY(80px);opacity:0;transition:transform .3s,opacity .3s
+}
+#toast.show{transform:translateY(0);opacity:1}
+#toast.error{border-color:#ff525240;color:var(--red)}
+#toast.success{border-color:#00e67640;color:var(--green)}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--border);margin-bottom:20px}
+.tab{
+  padding:8px 16px;cursor:pointer;font-size:12px;
+  color:var(--text3);border-bottom:2px solid transparent;
+  margin-bottom:-1px;transition:color .15s,border-color .15s;
+  text-transform:uppercase;letter-spacing:.08em
+}
+.tab.active{color:var(--accent);border-bottom-color:var(--accent)}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+.info-block{
+  background:var(--bg3);border:1px solid var(--border);
+  border-radius:8px;padding:14px 16px;font-size:12px;color:var(--text2);
+  line-height:1.8;margin-top:16px
+}
+.info-block strong{color:var(--text)}
+.divider{height:1px;background:var(--border);margin:28px 0}
+.compare-row{
+  display:flex;align-items:center;gap:12px;padding:10px 0;
+  border-bottom:1px solid var(--border)
+}
+.compare-row:last-child{border-bottom:none}
+.compare-name{width:180px;flex-shrink:0;font-size:12px;color:var(--text2)}
+.compare-bar-wrap{flex:1;height:8px;background:var(--bg4);border-radius:4px;overflow:hidden}
+.compare-bar{height:100%;border-radius:4px;background:var(--accent);transition:width .9s}
+.compare-val{width:60px;text-align:right;font-size:12px;color:var(--text);flex-shrink:0}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.fade-in{animation:fadeUp .4s ease both}
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <header>
+    <div class="logo">
+      <div class="logo-mark">🧠</div>
+      <div>
+        <div class="logo-text">NeuroScan</div>
+        <div class="logo-sub">Brain Tumor Classification · v1.0</div>
+      </div>
+    </div>
+    <div class="header-badges">
+      <span class="badge live" id="api-status">API Connected</span>
+      <span class="badge">TF 2.10</span>
+      <span class="badge">ONNX FP32</span>
+      <span class="badge">Grad-CAM XAI</span>
+    </div>
+  </header>
+
+  <div style="height:36px"></div>
+
+  <div class="grid-2" style="align-items:start">
+
+    <div>
+      <div class="section-title">MRI Input</div>
+      <div class="card" style="margin-bottom:20px">
+        <div id="upload-zone">
+          <input type="file" id="file-input" accept="image/*"/>
+          <div class="upload-icon">⬆</div>
+          <div class="upload-label">Drop MRI image here</div>
+          <div class="upload-hint">PNG, JPG, JPEG — any brain MRI scan</div>
+        </div>
+        <div id="preview-area" style="margin-top:16px">
+          <div class="preview-img-wrap">
+            <img id="preview-img" src="" alt="MRI preview"/>
+          </div>
+          <div class="img-filename" id="img-filename"></div>
+        </div>
+      </div>
+
+      <div class="section-title">Inference Backend</div>
+      <div class="card" style="margin-bottom:20px">
+        <div class="backend-grid">
+          <button class="backend-btn active" data-backend="tensorflow" onclick="selectBackend(this)">
+            <span class="b-name">TensorFlow</span>
+            <span class="b-tag">FP32 · Grad-CAM</span>
+          </button>
+          <button class="backend-btn" data-backend="onnx_fp32" onclick="selectBackend(this)">
+            <span class="b-name">ONNX FP32</span>
+            <span class="b-tag">Full precision</span>
+          </button>
+          <button class="backend-btn" id="dynamic-btn" data-backend="onnx_dynamic" onclick="selectBackend(this)">
+            <span class="b-name">Dynamic INT8</span>
+            <span class="b-tag">Quantized · faster</span>
+          </button>
+          <button class="backend-btn" data-backend="onnx_static" onclick="selectBackend(this)">
+            <span class="b-name">Static INT8</span>
+            <span class="b-tag">Calibrated · smallest</span>
+          </button>
+        </div>
+
+        <div id="gradcam-toggle-wrap" style="display:flex;align-items:center;gap:10px;margin-bottom:20px">
+          <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--text2)">
+            <div style="position:relative;width:36px;height:20px">
+              <input type="checkbox" id="gradcam-toggle" style="opacity:0;position:absolute;width:100%;height:100%;cursor:pointer;margin:0" onchange="updateGradcamUI()"/>
+              <div id="toggle-track" style="width:36px;height:20px;background:var(--bg4);border-radius:10px;border:1px solid var(--border2);transition:background .2s"></div>
+              <div id="toggle-thumb" style="position:absolute;top:3px;left:3px;width:14px;height:14px;background:var(--text3);border-radius:50%;transition:transform .2s,background .2s"></div>
+            </div>
+            Show Grad-CAM heatmap
+          </label>
+          <span id="gradcam-note" style="font-size:11px;color:var(--text3)">(TF backend only)</span>
+        </div>
+
+        <button id="analyse-btn" onclick="analyse()" disabled>
+          <div class="btn-inner">
+            <div class="spinner" id="spinner"></div>
+            <span id="btn-label">Upload an image first</span>
+          </div>
+        </button>
+      </div>
+
+      <div class="section-title">Quantization Info</div>
+      <div class="card card-sm">
+        <div class="tabs">
+          <div class="tab active" onclick="switchTab(this,'q-dynamic')">Dynamic INT8</div>
+          <div class="tab" onclick="switchTab(this,'q-static')">Static INT8</div>
+          <div class="tab" onclick="switchTab(this,'q-compare')">Compare</div>
+        </div>
+        <div id="q-dynamic" class="tab-panel active">
+          <div class="info-block">
+            <strong>Dynamic Quantization</strong> converts model <strong>weights</strong> to INT8 at export time. Activations remain FP32 at runtime and are quantized on-the-fly. No calibration data needed.
+          </div>
+        </div>
+        <div id="q-static" class="tab-panel">
+          <div class="info-block">
+            <strong>Static Quantization</strong> quantizes both <strong>weights and activations</strong> to INT8. Requires calibration data. It can be smaller and faster, but accuracy may vary by architecture.
+          </div>
+        </div>
+        <div id="q-compare" class="tab-panel">
+          <div id="benchmark-data" style="padding:4px 0">
+            <div style="color:var(--text3);font-size:12px">Loading benchmark...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-title">Analysis Results</div>
+
+      <div id="placeholder" class="card" style="text-align:center;padding:60px 24px">
+        <div style="font-size:48px;opacity:.2;margin-bottom:16px">🔬</div>
+        <div style="font-family:'Syne',sans-serif;font-size:15px;color:var(--text3)">
+          Upload an MRI scan and click analyse
+        </div>
+        <div style="font-size:12px;color:var(--text3);margin-top:8px;opacity:.6">
+          Supports glioma · meningioma · no tumor · pituitary
+        </div>
+      </div>
+
+      <div id="results-panel" class="fade-in">
+        <div id="pred-hero" class="prediction-hero card">
+          <div>
+            <div class="pred-class" id="pred-class-text"></div>
+            <div class="pred-conf" id="pred-conf-text"></div>
+          </div>
+          <div class="pred-badge" id="pred-badge"></div>
+        </div>
+
+        <div class="card" style="margin-bottom:16px">
+          <div class="section-title">Class Probabilities</div>
+          <div id="prob-bars"></div>
+          <div class="stats-row" id="stats-row">
+            <div class="stat-card">
+              <div class="stat-val" id="stat-conf">—</div>
+              <div class="stat-lbl">Confidence</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-val" id="stat-latency">—</div>
+              <div class="stat-lbl">Latency</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-val" id="stat-backend">—</div>
+              <div class="stat-lbl">Backend</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" id="gradcam-card" style="display:none;margin-bottom:16px">
+          <div class="section-title">Grad-CAM Explanation</div>
+          <div class="gradcam-grid">
+            <div class="gradcam-item">
+              <img id="gradcam-overlay-img" src="" alt="Grad-CAM overlay"/>
+              <div class="gradcam-lbl">Activation Overlay</div>
+            </div>
+            <div class="gradcam-item">
+              <img id="gradcam-heatmap-img" src="" alt="Heatmap"/>
+              <div class="gradcam-lbl">Raw Heatmap</div>
+            </div>
+          </div>
+          <div class="info-block" style="margin-top:12px">
+            <strong>Grad-CAM</strong> highlights regions the model focused on.
+          </div>
+        </div>
+
+        <div class="card card-sm">
+          <div class="section-title">Class Reference</div>
+          <table class="model-table">
+            <thead><tr>
+              <th>Class</th><th>Description</th><th>Severity</th>
+            </tr></thead>
+            <tbody>
+              <tr><td><span style="color:var(--red)">Glioma</span></td>
+                  <td style="color:var(--text2)">Tumor of glial cells</td>
+                  <td><span class="tag">High</span></td></tr>
+              <tr><td><span style="color:var(--amber)">Meningioma</span></td>
+                  <td style="color:var(--text2)">Tumor of meninges</td>
+                  <td><span class="tag amber">Medium</span></td></tr>
+              <tr><td><span style="color:var(--green)">No Tumor</span></td>
+                  <td style="color:var(--text2)">Normal brain MRI</td>
+                  <td><span class="tag green">None</span></td></tr>
+              <tr><td><span style="color:var(--purple)">Pituitary</span></td>
+                  <td style="color:var(--text2)">Pituitary gland tumor</td>
+                  <td><span class="tag amber">Medium</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section-title">Model Performance Comparison</div>
+  <div class="card">
+    <div id="model-compare">
+      <div style="color:var(--text3);font-size:12px">Loading model info...</div>
+    </div>
+  </div>
+
+</div>
+
+<div id="toast"></div>
+
+<script>
+const API = '';
+let selectedBackend = 'tensorflow';
+let selectedFile = null;
+let healthInfo = null;
+
+async function checkHealth(){
+  try{
+    const r = await fetch(`${API}/health`);
+    if(!r.ok) throw new Error();
+    const d = await r.json();
+    healthInfo = d;
+    document.getElementById('api-status').textContent = `API · ${d.loaded_backends.length} backends`;
+
+    const failed = d.failed_backends || {};
+    if (failed.onnx_dynamic) {
+      const btn = document.getElementById('dynamic-btn');
+      if (btn) {
+        btn.classList.add('disabled');
+        btn.title = 'Dynamic INT8 is not available in this runtime';
+      }
+      if (selectedBackend === 'onnx_dynamic') {
+        selectedBackend = 'tensorflow';
+        document.querySelectorAll('.backend-btn').forEach(b => b.classList.remove('active'));
+        document.querySelector('.backend-btn[data-backend="tensorflow"]').classList.add('active');
+      }
+    }
+  } catch(e){
+    const el = document.getElementById('api-status');
+    el.textContent = 'API Offline';
+    el.classList.remove('live');
+  }
+}
+
+async function loadModelInfo(){
+  try{
+    const r = await fetch(`${API}/models/info`);
+    if(!r.ok) throw new Error();
+    const d = await r.json();
+    const results = d.all_results || {};
+    const values = Object.values(results);
+    const max = values.length ? Math.max(...values) : null;
+    let html = '';
+    for(const [name, acc] of Object.entries(results)){
+      const pct = (acc*100).toFixed(2);
+      const isB = acc === max;
+      html += `<div class="compare-row">
+        <div class="compare-name">${name}${isB ? ' <span class="tag green">best</span>' : ''}</div>
+        <div class="compare-bar-wrap"><div class="compare-bar" style="width:${pct}%;background:${isB?'var(--green)':'var(--accent)'}"></div></div>
+        <div class="compare-val">${pct}%</div>
+      </div>`;
+    }
+    document.getElementById('model-compare').innerHTML = html || '<div style="color:var(--text3);font-size:12px">No data</div>';
+  } catch(e){
+    document.getElementById('model-compare').innerHTML = '<div style="color:var(--text3);font-size:12px">Run train.py to generate model info.</div>';
+  }
+}
+
+async function loadBenchmark(){
+  try{
+    const r = await fetch(`${API}/benchmark`);
+    if(!r.ok) throw new Error();
+    const d = await r.json();
+    let html = '<table class="model-table"><thead><tr><th>Format</th><th>Accuracy</th><th>Latency</th><th>Size</th></tr></thead><tbody>';
+    for(const [name, v] of Object.entries(d)){
+      const acc = v.accuracy !== undefined ? (v.accuracy*100).toFixed(2)+'%' : '—';
+      const lat = v.latency_ms !== undefined ? v.latency_ms.toFixed(1)+' ms' : '—';
+      const size = v.size_mb !== null && v.size_mb !== undefined ? v.size_mb.toFixed(1)+' MB' : '—';
+      html += `<tr><td>${name}</td><td>${acc}</td><td>${lat}</td><td>${size}</td></tr>`;
+    }
+    html += '</tbody></table>';
+    document.getElementById('benchmark-data').innerHTML = html;
+  } catch(e){
+    document.getElementById('benchmark-data').innerHTML = '<div style="color:var(--text3);font-size:12px">Run export_onnx.py to generate benchmark data.</div>';
+  }
+}
+
+const fileInput  = document.getElementById('file-input');
+const uploadZone = document.getElementById('upload-zone');
+
+fileInput.addEventListener('change', e => {
+  if(e.target.files[0]) handleFile(e.target.files[0]);
+});
+uploadZone.addEventListener('dragover', e => { e.preventDefault(); uploadZone.classList.add('drag'); });
+uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('drag'));
+uploadZone.addEventListener('drop', e => {
+  e.preventDefault();
+  uploadZone.classList.remove('drag');
+  if(e.dataTransfer.files[0]) handleFile(e.dataTransfer.files[0]);
+});
+
+function handleFile(file){
+  selectedFile = file;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    document.getElementById('preview-img').src = ev.target.result;
+    document.getElementById('img-filename').textContent = file.name;
+    document.getElementById('preview-area').style.display = 'flex';
+    document.getElementById('analyse-btn').disabled = false;
+    document.getElementById('btn-label').textContent = 'Analyse MRI';
+  };
+  reader.readAsDataURL(file);
+}
+
+function selectBackend(btn){
+  if (btn.classList.contains('disabled')) return;
+  document.querySelectorAll('.backend-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  selectedBackend = btn.dataset.backend;
+  updateGradcamUI();
+}
+
+function updateGradcamUI(){
+  const isTF = selectedBackend === 'tensorflow';
+  const toggle = document.getElementById('gradcam-toggle');
+  const track = document.getElementById('toggle-track');
+  const thumb = document.getElementById('toggle-thumb');
+  const note = document.getElementById('gradcam-note');
+  note.style.opacity = isTF ? '0' : '1';
+  if(!isTF){ toggle.checked = false; }
+  toggle.disabled = !isTF;
+  const on = toggle.checked && isTF;
+  track.style.background = on ? 'var(--accent2)' : 'var(--bg4)';
+  thumb.style.transform = on ? 'translateX(16px)' : 'none';
+  thumb.style.background = on ? '#000' : 'var(--text3)';
+}
+
+document.getElementById('gradcam-toggle').addEventListener('change', updateGradcamUI);
+
+async function analyse(){
+  if(!selectedFile) return;
+
+  const btn = document.getElementById('analyse-btn');
+  const spinner = document.getElementById('spinner');
+  const label = document.getElementById('btn-label');
+  btn.disabled = true;
+  spinner.style.display = 'block';
+  label.textContent = 'Analysing...';
+
+  const useGradcam = document.getElementById('gradcam-toggle').checked && selectedBackend === 'tensorflow';
+
+  const formData = new FormData();
+  formData.append('file', selectedFile);
+
+  const endpoint = useGradcam
+    ? `${API}/predict/gradcam`
+    : selectedBackend === 'tensorflow' ? `${API}/predict`
+    : selectedBackend === 'onnx_fp32' ? `${API}/predict/onnx`
+    : selectedBackend === 'onnx_dynamic' ? `${API}/predict/dynamic`
+    : `${API}/predict/static`;
+
+  try{
+    const r = await fetch(endpoint, { method:'POST', body: formData });
+    if(!r.ok){
+      let message = 'API error';
+      try{
+        const err = await r.json();
+        message = err.detail || message;
+      } catch(_) {}
+      throw new Error(message);
+    }
+    const data = await r.json();
+    renderResults(data, useGradcam);
+    showToast('Analysis complete', 'success');
+  } catch(e){
+    showToast(`Error: ${e.message}`, 'error');
+  } finally{
+    btn.disabled = false;
+    spinner.style.display = 'none';
+    label.textContent = 'Analyse MRI';
+  }
+}
+
+function renderResults(data, hasGradcam){
+  const cls = data.predicted_class.toLowerCase().replace(' ','');
+  const conf = data.confidence;
+  const confPct = `${conf.toFixed(1)}%`;
+
+  document.getElementById('placeholder').style.display = 'none';
+  document.getElementById('results-panel').style.display = 'block';
+  document.getElementById('results-panel').classList.add('fade-in');
+
+  const hero = document.getElementById('pred-hero');
+  hero.className = `prediction-hero card ${cls}`;
+
+  const classText = document.getElementById('pred-class-text');
+  classText.className = `pred-class ${cls}`;
+  classText.textContent = data.predicted_class.toUpperCase();
+
+  document.getElementById('pred-conf-text').textContent =
+    `Confidence: ${confPct} · via ${data.backend}`;
+
+  const badge = document.getElementById('pred-badge');
+  const level = conf >= 80 ? 'high' : conf >= 50 ? 'mid' : 'low';
+  badge.className = `pred-badge ${level}`;
+  badge.textContent = conf >= 80 ? 'High confidence' : conf >= 50 ? 'Moderate' : 'Low confidence';
+
+  const probs = data.all_probabilities;
+  let barsHtml = '';
+  for(const [name, p] of Object.entries(probs).sort((a,b) => b[1]-a[1])){
+    const clsKey = name.toLowerCase().replace(' ','');
+    const pct = p.toFixed(1);
+    barsHtml += `<div class="prob-row">
+      <div class="prob-header">
+        <span class="prob-name">${name}</span>
+        <span class="prob-val">${pct}%</span>
+      </div>
+      <div class="prob-track">
+        <div class="prob-fill ${clsKey}" style="width:${p}%"></div>
+      </div>
+    </div>`;
+  }
+  document.getElementById('prob-bars').innerHTML = barsHtml;
+
+  document.getElementById('stat-conf').textContent = confPct;
+  document.getElementById('stat-latency').textContent = data.latency_ms ? `${data.latency_ms}ms` : '—';
+  const backendShort = {
+    tensorflow:'TF FP32',
+    onnx_fp32:'ONNX FP32',
+    onnx_dynamic:'Dynamic INT8',
+    onnx_static:'Static INT8'
+  }[data.backend] || data.backend;
+  document.getElementById('stat-backend').textContent = backendShort;
+
+  const gcCard = document.getElementById('gradcam-card');
+  if(hasGradcam && data.gradcam_b64){
+    document.getElementById('gradcam-overlay-img').src = `data:image/png;base64,${data.gradcam_b64}`;
+    document.getElementById('gradcam-heatmap-img').src = `data:image/png;base64,${data.heatmap_b64}`;
+    gcCard.style.display = 'block';
+  } else {
+    gcCard.style.display = 'none';
+  }
+}
+
+function switchTab(tab, panelId){
+  const parent = tab.closest('.card');
+  parent.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  parent.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  tab.classList.add('active');
+  document.getElementById(panelId).classList.add('active');
+}
+
+function showToast(msg, type='success'){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = `show ${type}`;
+  setTimeout(() => t.className = '', 3500);
+}
+
+checkHealth();
+loadModelInfo();
+loadBenchmark();
+updateGradcamUI();
+</script>
+</body>
+</html>

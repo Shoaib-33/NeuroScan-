@@ -1,0 +1,86 @@
+2026-03-31 12:45:57 | INFO | train | ==================================================
+2026-03-31 12:45:57 | INFO | train | Starting training pipeline
+2026-03-31 12:45:57 | INFO | train | ==================================================
+2026-03-31 12:57:30 | INFO | train | Baseline CNN training complete.
+2026-03-31 13:08:17 | INFO | train | Transfer Learning training complete.
+2026-03-31 13:13:09 | INFO | train | Fine-Tuned training complete.
+2026-03-31 15:59:57 | INFO | train | ==================================================
+2026-03-31 15:59:57 | INFO | train | Starting full training pipeline
+2026-03-31 15:59:57 | INFO | train | ==================================================
+2026-03-31 16:11:00 | INFO | train | Baseline CNN training complete.
+2026-03-31 16:22:00 | INFO | train | Transfer Learning training complete.
+2026-03-31 16:26:58 | INFO | train | Fine-Tuned training complete.
+2026-03-31 16:43:07 | INFO | train | ==================================================
+2026-03-31 16:43:07 | INFO | train | Starting full training pipeline
+2026-03-31 16:43:07 | INFO | train | ==================================================
+2026-03-31 16:53:37 | INFO | train | Baseline CNN training complete.
+2026-03-31 17:04:24 | INFO | train | Transfer Learning training complete.
+2026-03-31 17:09:20 | INFO | train | Fine-Tuned training complete.
+2026-03-31 17:09:57 | INFO | train |   EfficientNet weights saved (val_acc=0.2500)
+2026-03-31 17:12:19 | INFO | train | Best EfficientNet weights restored.
+2026-03-31 17:36:33 | INFO | train | ==================================================
+2026-03-31 17:36:33 | INFO | train | Starting full training pipeline
+2026-03-31 17:36:33 | INFO | train | ==================================================
+2026-03-31 17:47:05 | INFO | train | Baseline CNN training complete.
+2026-03-31 17:54:34 | INFO | train | Transfer Learning training complete.
+2026-03-31 18:03:34 | INFO | train | Fine-Tuned training complete.
+2026-03-31 18:04:11 | INFO | train |   EfficientNet weights saved (val_acc=0.2500)
+2026-03-31 18:06:31 | INFO | train | Best EfficientNet weights restored.
+2026-03-31 18:06:49 | INFO | train | EfficientNetB0 training complete.
+2026-03-31 18:43:24 | INFO | train | Optuna best val_accuracy : 0.8446
+2026-03-31 18:43:24 | INFO | train | Optuna best params       : {'filters_1': 64, 'filters_2': 128, 'filters_3': 128, 'dense_units': 256, 'dropout': 0.41542144036132356, 'lr': 0.00011919711923710529}
+2026-03-31 18:56:54 | INFO | train | Optuna Best CNN training complete.
+2026-03-31 18:56:54 | INFO | train | 
+=============================================
+2026-03-31 18:56:54 | INFO | train | Model                        Val Acc
+2026-03-31 18:56:54 | INFO | train | =============================================
+2026-03-31 18:56:54 | INFO | train | Baseline CNN                  0.9045
+2026-03-31 18:56:54 | INFO | train | Transfer Learning             0.9250
+2026-03-31 18:56:54 | INFO | train | EfficientNetB0                0.2500
+2026-03-31 18:56:54 | INFO | train | Optuna Best CNN               0.9089
+2026-03-31 18:56:54 | INFO | train | =============================================
+2026-03-31 19:32:15 | INFO | train | Training pipeline complete.
+2026-03-31 20:07:21 | INFO | train | MLflow → DagsHub: https://dagshub.com/shoaib.shahriar01/brain-tumor-classification.mlflow
+2026-03-31 20:07:21 | INFO | train | ==================================================
+2026-03-31 20:07:21 | INFO | train | Starting full training pipeline
+2026-03-31 20:07:21 | INFO | train | ==================================================
+2026-03-31 20:18:32 | INFO | train | Baseline CNN training complete.
+2026-03-31 20:30:53 | INFO | train | Transfer Learning training complete.
+2026-03-31 20:34:09 | INFO | train | MLflow → DagsHub: https://dagshub.com/shoaib.shahriar01/brain-tumor-classification.mlflow
+2026-03-31 20:34:10 | INFO | train | ==================================================
+2026-03-31 20:34:10 | INFO | train | Starting full training pipeline
+2026-03-31 20:34:10 | INFO | train | ==================================================
+2026-03-31 20:46:11 | INFO | train | Baseline CNN training complete.
+2026-03-31 20:58:00 | INFO | train | Transfer Learning training complete.
+2026-03-31 21:04:20 | INFO | train | Fine-Tuned training complete.
+2026-03-31 21:12:50 | INFO | train | MLflow → DagsHub: https://dagshub.com/shoaib.shahriar01/brain-tumor-classification.mlflow
+2026-03-31 21:12:50 | INFO | train | ==================================================
+2026-03-31 21:12:50 | INFO | train | Starting full training pipeline
+2026-03-31 21:12:50 | INFO | train | ==================================================
+2026-03-31 21:24:31 | INFO | train | Baseline CNN training complete.
+2026-03-31 21:33:01 | INFO | train | Transfer Learning training complete.
+2026-03-31 21:44:03 | INFO | train | Fine-Tuned training complete.
+2026-03-31 21:44:42 | INFO | train |   EfficientNet weights saved (val_acc=0.8643)
+2026-03-31 21:45:11 | INFO | train |   EfficientNet weights saved (val_acc=0.8991)
+2026-03-31 21:46:35 | INFO | train |   EfficientNet weights saved (val_acc=0.9107)
+2026-03-31 21:48:03 | INFO | train |   EfficientNet weights saved (val_acc=0.9152)
+2026-03-31 21:49:39 | INFO | train |   EfficientNet weights saved (val_acc=0.9295)
+2026-03-31 21:51:05 | INFO | train |   EfficientNet weights saved (val_acc=0.9357)
+2026-03-31 21:52:02 | INFO | train |   EfficientNet weights saved (val_acc=0.9393)
+2026-03-31 21:54:11 | INFO | train | Best EfficientNet weights restored.
+2026-03-31 21:54:32 | INFO | train | EfficientNet weights logged to MLflow → ./saved_models\effnet_final_weights.h5
+2026-03-31 21:54:32 | INFO | train | EfficientNetB0 training complete.
+2026-03-31 22:39:09 | INFO | train | Optuna best val_accuracy : 0.8348
+2026-03-31 22:39:09 | INFO | train | Optuna best params       : {'filters_1': 64, 'filters_2': 128, 'filters_3': 256, 'dense_units': 128, 'dropout': 0.2258892046075821, 'lr': 0.00022392987135907492}
+2026-03-31 22:53:50 | INFO | train | Optuna Best CNN training complete.
+2026-03-31 22:53:50 | INFO | train | 
+=============================================
+2026-03-31 22:53:50 | INFO | train | Model                        Val Acc
+2026-03-31 22:53:50 | INFO | train | =============================================
+2026-03-31 22:53:50 | INFO | train | Baseline CNN                  0.9009
+2026-03-31 22:53:50 | INFO | train | Transfer Learning             0.9214
+2026-03-31 22:53:50 | INFO | train | Fine-Tuned                    0.9366
+2026-03-31 22:53:50 | INFO | train | EfficientNetB0                0.9393 << best
+2026-03-31 22:53:50 | INFO | train | Optuna Best CNN               0.9054
+2026-03-31 22:53:50 | INFO | train | =============================================
+2026-03-31 22:54:07 | INFO | train | Training pipeline complete.

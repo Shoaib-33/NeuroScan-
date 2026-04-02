@@ -1,0 +1,92 @@
+2026-03-31 12:45:57 | INFO | data_loader | Train samples : 4480
+2026-03-31 12:45:57 | INFO | data_loader | Val samples   : 1120
+2026-03-31 12:45:57 | INFO | data_loader | Test samples  : 1600
+2026-03-31 12:45:57 | INFO | data_loader | Classes       : {'glioma': 0, 'meningioma': 1, 'notumor': 2, 'pituitary': 3}
+2026-03-31 15:59:57 | INFO | data_loader | Train samples : 4480
+2026-03-31 15:59:57 | INFO | data_loader | Val samples   : 1120
+2026-03-31 15:59:57 | INFO | data_loader | Test samples  : 1600
+2026-03-31 15:59:57 | INFO | data_loader | Classes       : {'glioma': 0, 'meningioma': 1, 'notumor': 2, 'pituitary': 3}
+2026-03-31 16:43:07 | INFO | data_loader | Train samples : 4480
+2026-03-31 16:43:07 | INFO | data_loader | Val samples   : 1120
+2026-03-31 16:43:07 | INFO | data_loader | Test samples  : 1600
+2026-03-31 16:43:07 | INFO | data_loader | Classes       : {'glioma': 0, 'meningioma': 1, 'notumor': 2, 'pituitary': 3}
+2026-03-31 17:36:33 | INFO | data_loader | Train samples : 4480
+2026-03-31 17:36:33 | INFO | data_loader | Val samples   : 1120
+2026-03-31 17:36:33 | INFO | data_loader | Test samples  : 1600
+2026-03-31 17:36:33 | INFO | data_loader | Classes       : {'glioma': 0, 'meningioma': 1, 'notumor': 2, 'pituitary': 3}
+2026-03-31 20:07:21 | INFO | data_loader | Train samples : 4480
+2026-03-31 20:07:21 | INFO | data_loader | Val samples   : 1120
+2026-03-31 20:07:21 | INFO | data_loader | Test samples  : 1600
+2026-03-31 20:07:21 | INFO | data_loader | Classes       : {'glioma': 0, 'meningioma': 1, 'notumor': 2, 'pituitary': 3}
+2026-03-31 20:34:10 | INFO | data_loader | Train samples : 4480
+2026-03-31 20:34:10 | INFO | data_loader | Val samples   : 1120
+2026-03-31 20:34:10 | INFO | data_loader | Test samples  : 1600
+2026-03-31 20:34:10 | INFO | data_loader | Classes       : {'glioma': 0, 'meningioma': 1, 'notumor': 2, 'pituitary': 3}
+2026-03-31 21:12:50 | INFO | data_loader | Train samples : 4480
+2026-03-31 21:12:50 | INFO | data_loader | Val samples   : 1120
+2026-03-31 21:12:50 | INFO | data_loader | Test samples  : 1600
+2026-03-31 21:12:50 | INFO | data_loader | Classes       : {'glioma': 0, 'meningioma': 1, 'notumor': 2, 'pituitary': 3}
+2026-03-31 23:02:54 | INFO | data_loader | Train samples : 4480
+2026-03-31 23:02:54 | INFO | data_loader | Val samples   : 1120
+2026-03-31 23:02:54 | INFO | data_loader | Test samples  : 1600
+2026-03-31 23:02:54 | INFO | data_loader | Classes       : {'glioma': 0, 'meningioma': 1, 'notumor': 2, 'pituitary': 3}
+2026-03-31 23:05:49 | INFO | data_loader | Train samples : 4480
+2026-03-31 23:05:49 | INFO | data_loader | Val samples   : 1120
+2026-03-31 23:05:49 | INFO | data_loader | Test samples  : 1600
+2026-03-31 23:05:49 | INFO | data_loader | Classes       : {'glioma': 0, 'meningioma': 1, 'notumor': 2, 'pituitary': 3}
+2026-03-31 23:12:49 | INFO | data_loader | Train samples : 4480
+2026-03-31 23:12:49 | INFO | data_loader | Val samples   : 1120
+2026-03-31 23:12:49 | INFO | data_loader | Test samples  : 1600
+2026-03-31 23:12:49 | INFO | data_loader | Classes       : {'glioma': 0, 'meningioma': 1, 'notumor': 2, 'pituitary': 3}
+2026-03-31 23:13:36 | INFO | data_loader | Train samples : 4480
+2026-03-31 23:13:36 | INFO | data_loader | Val samples   : 1120
+2026-03-31 23:13:36 | INFO | data_loader | Test samples  : 1600
+2026-03-31 23:13:36 | INFO | data_loader | Classes       : {'glioma': 0, 'meningioma': 1, 'notumor': 2, 'pituitary': 3}
+2026-03-31 23:47:29 | INFO | data_loader | Train samples : 4480
+2026-03-31 23:47:29 | INFO | data_loader | Val samples   : 1120
+2026-03-31 23:47:29 | INFO | data_loader | Test samples  : 1600
+2026-03-31 23:47:29 | INFO | data_loader | Classes       : {'glioma': 0, 'meningioma': 1, 'notumor': 2, 'pituitary': 3}
+2026-03-31 23:48:32 | INFO | data_loader | Train samples : 4480
+2026-03-31 23:48:32 | INFO | data_loader | Val samples   : 1120
+2026-03-31 23:48:32 | INFO | data_loader | Test samples  : 1600
+2026-03-31 23:48:32 | INFO | data_loader | Classes       : {'glioma': 0, 'meningioma': 1, 'notumor': 2, 'pituitary': 3}
+2026-03-31 23:48:45 | INFO | data_loader | Train samples : 4480
+2026-03-31 23:48:45 | INFO | data_loader | Val samples   : 1120
+2026-03-31 23:48:45 | INFO | data_loader | Test samples  : 1600
+2026-03-31 23:48:45 | INFO | data_loader | Classes       : {'glioma': 0, 'meningioma': 1, 'notumor': 2, 'pituitary': 3}
+2026-03-31 23:51:06 | INFO | data_loader | Train samples : 4480
+2026-03-31 23:51:06 | INFO | data_loader | Val samples   : 1120
+2026-03-31 23:51:06 | INFO | data_loader | Test samples  : 1600
+2026-03-31 23:51:06 | INFO | data_loader | Classes       : {'glioma': 0, 'meningioma': 1, 'notumor': 2, 'pituitary': 3}
+2026-04-01 00:13:41 | INFO | data_loader | Train samples : 4480
+2026-04-01 00:13:41 | INFO | data_loader | Val samples   : 1120
+2026-04-01 00:13:41 | INFO | data_loader | Test samples  : 1600
+2026-04-01 00:13:41 | INFO | data_loader | Classes       : {'glioma': 0, 'meningioma': 1, 'notumor': 2, 'pituitary': 3}
+2026-04-01 00:14:18 | INFO | data_loader | Train samples : 4480
+2026-04-01 00:14:18 | INFO | data_loader | Val samples   : 1120
+2026-04-01 00:14:18 | INFO | data_loader | Test samples  : 1600
+2026-04-01 00:14:18 | INFO | data_loader | Classes       : {'glioma': 0, 'meningioma': 1, 'notumor': 2, 'pituitary': 3}
+2026-04-01 00:20:40 | INFO | data_loader | Train samples : 4480
+2026-04-01 00:20:40 | INFO | data_loader | Val samples   : 1120
+2026-04-01 00:20:40 | INFO | data_loader | Test samples  : 1600
+2026-04-01 00:20:40 | INFO | data_loader | Classes       : {'glioma': 0, 'meningioma': 1, 'notumor': 2, 'pituitary': 3}
+2026-04-01 00:21:49 | INFO | data_loader | Train samples : 4480
+2026-04-01 00:21:49 | INFO | data_loader | Val samples   : 1120
+2026-04-01 00:21:49 | INFO | data_loader | Test samples  : 1600
+2026-04-01 00:21:49 | INFO | data_loader | Classes       : {'glioma': 0, 'meningioma': 1, 'notumor': 2, 'pituitary': 3}
+2026-04-01 11:32:15 | INFO | data_loader | Train samples : 4480
+2026-04-01 11:32:15 | INFO | data_loader | Val samples   : 1120
+2026-04-01 11:32:15 | INFO | data_loader | Test samples  : 1600
+2026-04-01 11:32:15 | INFO | data_loader | Classes       : {'glioma': 0, 'meningioma': 1, 'notumor': 2, 'pituitary': 3}
+2026-04-01 11:35:30 | INFO | data_loader | Train samples : 4480
+2026-04-01 11:35:30 | INFO | data_loader | Val samples   : 1120
+2026-04-01 11:35:30 | INFO | data_loader | Test samples  : 1600
+2026-04-01 11:35:30 | INFO | data_loader | Classes       : {'glioma': 0, 'meningioma': 1, 'notumor': 2, 'pituitary': 3}
+2026-04-01 11:45:39 | INFO | data_loader | Train samples : 4480
+2026-04-01 11:45:39 | INFO | data_loader | Val samples   : 1120
+2026-04-01 11:45:39 | INFO | data_loader | Test samples  : 1600
+2026-04-01 11:45:39 | INFO | data_loader | Classes       : {'glioma': 0, 'meningioma': 1, 'notumor': 2, 'pituitary': 3}
+2026-04-01 11:50:04 | INFO | data_loader | Train samples : 4480
+2026-04-01 11:50:04 | INFO | data_loader | Val samples   : 1120
+2026-04-01 11:50:04 | INFO | data_loader | Test samples  : 1600
+2026-04-01 11:50:04 | INFO | data_loader | Classes       : {'glioma': 0, 'meningioma': 1, 'notumor': 2, 'pituitary': 3}

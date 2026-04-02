@@ -1,0 +1,58 @@
+2026-03-31 23:02:54 | ERROR | evaluate | Model not found at ./saved_models\best_brain_tumor_model.h5. Run train.py first.
+2026-03-31 23:05:49 | INFO | evaluate | Loading model from ./saved_models\ft_best.h5
+2026-03-31 23:05:51 | INFO | evaluate | Evaluating best_model on test set ...
+2026-03-31 23:06:06 | INFO | evaluate | 
+Classification Report — best_model:
+              precision    recall  f1-score   support
+
+      glioma     0.2484    0.1900    0.2153       400
+  meningioma     0.2554    0.2375    0.2461       400
+     notumor     0.2568    0.2825    0.2690       400
+   pituitary     0.2759    0.3325    0.3016       400
+
+    accuracy                         0.2606      1600
+   macro avg     0.2591    0.2606    0.2580      1600
+weighted avg     0.2591    0.2606    0.2580      1600
+
+2026-03-31 23:06:06 | INFO | evaluate | Report saved → ./logs\best_model_report.txt
+2026-03-31 23:06:53 | INFO | evaluate | Confusion matrix saved → ./logs\best_model_confusion_matrix.png
+2026-03-31 23:06:56 | INFO | evaluate | best_model — Test accuracy: 0.8731 | Test loss: 0.5124
+2026-03-31 23:06:56 | INFO | evaluate | Evaluation complete.
+2026-03-31 23:12:49 | INFO | evaluate | Loading model from ./saved_models\ft_best.h5
+2026-03-31 23:12:51 | INFO | evaluate | Evaluating best_model on test set ...
+2026-03-31 23:12:57 | INFO | evaluate | 
+Classification Report — best_model:
+              precision    recall  f1-score   support
+
+      glioma     0.2320    0.1775    0.2011       400
+  meningioma     0.2500    0.2325    0.2409       400
+     notumor     0.2409    0.2650    0.2524       400
+   pituitary     0.2676    0.3225    0.2925       400
+
+    accuracy                         0.2494      1600
+   macro avg     0.2476    0.2494    0.2467      1600
+weighted avg     0.2476    0.2494    0.2467      1600
+
+2026-03-31 23:12:57 | INFO | evaluate | Report saved → ./logs\best_model_report.txt
+2026-03-31 23:13:00 | INFO | evaluate | Confusion matrix saved → ./logs\best_model_confusion_matrix.png
+2026-03-31 23:13:03 | INFO | evaluate | best_model — Test accuracy: 0.8731 | Test loss: 0.5124
+2026-03-31 23:13:03 | INFO | evaluate | Evaluation complete.
+2026-03-31 23:13:36 | INFO | evaluate | Loading model from ./saved_models\ft_best.h5
+2026-03-31 23:13:38 | INFO | evaluate | Evaluating best_model on test set ...
+2026-03-31 23:13:44 | INFO | evaluate | 
+Classification Report — best_model:
+              precision    recall  f1-score   support
+
+      glioma     0.9444    0.7225    0.8187       400
+  meningioma     0.8414    0.7825    0.8109       400
+     notumor     0.9045    0.9950    0.9476       400
+   pituitary     0.8237    0.9925    0.9002       400
+
+    accuracy                         0.8731      1600
+   macro avg     0.8785    0.8731    0.8694      1600
+weighted avg     0.8785    0.8731    0.8694      1600
+
+2026-03-31 23:13:44 | INFO | evaluate | Report saved → ./logs\best_model_report.txt
+2026-03-31 23:13:46 | INFO | evaluate | Confusion matrix saved → ./logs\best_model_confusion_matrix.png
+2026-03-31 23:13:49 | INFO | evaluate | best_model — Test accuracy: 0.8731 | Test loss: 0.5124
+2026-03-31 23:13:49 | INFO | evaluate | Evaluation complete.
