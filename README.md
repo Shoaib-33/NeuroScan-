@@ -19,7 +19,7 @@
 | Baseline CNN | 90.09% | 3-layer custom CNN |
 | Transfer Learning (MobileNetV2) | 92.14% | Frozen ImageNet weights |
 | Fine-Tuned (MobileNetV2) | 93.66% | Last 20 layers unfrozen |
-| **EfficientNetB0** | **93.93%** | **Best model** |
+| Transfer Learning **EfficientNetB0** | **93.93%** | **Best model** |
 | Optuna-Tuned CNN | 90.54% | 10-trial hyperparameter search |
 
 ![Model Comparison](logs/model_comparison.png)
@@ -176,41 +176,11 @@ docker run -p 8000:8000 \
   neuroscan
 ```
 
-### Using docker-compose (optional)
-
-```yaml
-# docker-compose.yml
-version: "3.9"
-services:
-  neuroscan:
-    build: .
-    ports:
-      - "8000:8000"
-    environment:
-      - DAGSHUB_USERNAME=${DAGSHUB_USERNAME}
-      - DAGSHUB_TOKEN=${DAGSHUB_TOKEN}
-    volumes:
-      - ./data:/app/data
-```
-
 ```bash
 docker-compose up
 ```
 
 ---
-
-## HuggingFace Spaces Deployment
-
-```bash
-# Install Git LFS (required for model files)
-git lfs install
-git lfs track "*.h5"
-git lfs track "*.onnx"
-
-# Push to HuggingFace Space
-git remote add space https://huggingface.co/spaces/YOUR_HF_USERNAME/neuroscan
-git push space main
-```
 
 Set secrets in HF Space: **Settings → Variables and secrets**
 ```
@@ -360,17 +330,6 @@ Applied to training set only:
 | Brightness | 0.9 – 1.1× |
 
 ---
-
-## Known Issues & Fixes
-
-| Issue | Fix |
-|---|---|
-| EfficientNetB0 `ModelCheckpoint` EagerTensor crash (TF 2.10) | Custom `WeightsCheckpoint` using `save_weights()` |
-| `mlflow.keras.log_model` crashes for EfficientNetB0 | Weights logged as plain artifact via `mlflow.log_artifact()` |
-| `ConvInteger` op not supported in ORT CPU for MobileNetV2 | Dynamic quantization uses `op_types_to_quantize=["MatMul","Gemm"]` only |
-| Windows cp1252 encoding error for Unicode characters | `encoding='utf-8'` on `FileHandler`; ASCII used in log strings |
-| NumPy 2.x incompatible with TF 2.10 | Pinned to `numpy==1.24.3` |
-| protobuf conflicts between TF and MLflow | Pinned to `protobuf==3.20.3` + env var `PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python` |
 
 ---
 
